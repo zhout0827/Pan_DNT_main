@@ -26,7 +26,7 @@ for (i in 1:nrow(l)){
     Non2 <- col1[!as.integer(col1) ==  col1]
     
     error_flag <- FALSE
-    # 检查是否是原始counts
+    
     if (length(Non1) > 0) {
         error_flag <- TRUE
         warning(paste("Raw Counts not found:", paste(Non1, collapse = ", ")))
