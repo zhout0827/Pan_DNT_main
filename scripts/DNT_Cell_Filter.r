@@ -41,9 +41,7 @@ for (i in 1:nrow(l)){
         Cell2 <- WhichCells(data, expression = (CD3D > 0 | CD3E > 0 | CD3G > 0))
         
         if (length(Cell2) > 0) {
-            #取出符合表达的细胞
             fil2 <- subset(data, cells = Cell2)
-            #保存
             saveRDS(fil2, file = paste0("/work/haoq/Pancancer_T/rds/level2_T_rds/",l[i],".rds"))
             print("File: Saved.")
         } else {
